@@ -1,0 +1,32 @@
+/* src/pages/WhyUs.css */
+.whyus-container {
+	padding: 20px;
+	text-align: center;
+}
+
+.whyus-sections {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	justify-content: center;
+}
+
+.whyus-card {
+	background-color: #fbc2eb;
+	padding: 20px;
+	border-radius: 8px;
+	width: 200px;
+	color: #051960;
+	transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whyus-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+	.whyus-card {
+		width: 150px;
+	}
+}

@@ -1,0 +1,55 @@
+/* src/components/Navbar.css */
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 20px;
+	background-color: #051960;
+	color: white;
+}
+
+.navbar-brand {
+	font-size: 24px;
+}
+
+.navbar-links ul {
+	display: flex;
+	gap: 15px;
+	list-style: none;
+}
+
+.navbar-links ul li a {
+	color: white;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.navbar-links ul li a:hover {
+	color: #78a3eb;
+}
+
+.navbar-toggle {
+	display: none;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.navbar-links {
+		display: none;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		background-color: #051960;
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar-links.active {
+		display: block;
+	}
+
+	.navbar-toggle {
+		display: block;
+	}
+}
