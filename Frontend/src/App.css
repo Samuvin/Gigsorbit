@@ -1,0 +1,10 @@
+/* src/App.css */
+
+.app-container {
+	padding-top: 80px; /* Adjust this value depending on the height of your navbar */
+}
+
+.content {
+	padding: 20px;
+	min-height: 100vh;
+}

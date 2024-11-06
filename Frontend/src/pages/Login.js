@@ -1,42 +1,21 @@
 // src/pages/Login.js
-import React, { useState } from "react";
+import React from "react";
 import "./Login.css";
 
 const Login = () => {
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-	const [error, setError] = useState("");
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (!email || !password) {
-			setError("Please fill in all fields");
-		} else {
-			setError("");
-			// Handle login logic here
-			console.log("Login successful");
-		}
-	};
-
 	return (
 		<div className="login-container">
-			<h1>Login</h1>
-			<form onSubmit={handleSubmit} className="login-form">
-				<input
-					type="email"
-					placeholder="Email"
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-				/>
-				<input
-					type="password"
-					placeholder="Password"
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-				/>
-				{error && <p className="error-message">{error}</p>}
-				<button type="submit">Log In</button>
+			<h1 className="login-title">Log In</h1>
+			<form className="login-form">
+				<input type="text" placeholder="Username" className="login-input" />
+				<input type="password" placeholder="Password" className="login-input" />
+				<button type="submit" className="login-button">
+					Log In
+				</button>
 			</form>
+			<p className="login-footer">
+				Don’t have an account? <a href="/signup">Sign up here</a>
+			</p>
 		</div>
 	);
 };
